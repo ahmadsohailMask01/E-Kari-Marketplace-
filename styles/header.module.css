@@ -1,0 +1,54 @@
+.nav {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: 20px 30px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.row {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 25%;
+}
+.logo {
+  margin: 2%;
+  border-radius: 50%;
+}
+.LogoText {
+  font-size: 24px;
+  color: #353535;
+  font-weight: 700;
+  margin-left: 3%;
+}
+.LogoText:hover {
+  color: rgba(82, 76, 79);
+}
+
+.NavBarLinks {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  align-items: center;
+}
+
+.link_style {
+  font-size: 20px;
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
+  padding: 0px 10px;
+}
+
+.connectionButton {
+  background-color: #571f46;
+  padding: 8px 15px 8px 15px;
+  color: white;
+}

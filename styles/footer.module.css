@@ -1,0 +1,267 @@
+.footer_section {
+  display: flex;
+  flex-direction: column;
+  background-color: #571f46;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+}
+.container1 {
+  display: flex;
+  flex-direction: row;
+  padding: 2%;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+  width: 70%;
+}
+.branding {
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+}
+.logo {
+  width: 70px;
+  height: 70px;
+}
+.Branding_name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: white;
+  cursor: pointer;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.main_head {
+  font-size: 27px;
+  font-weight: 600;
+}
+.sub_head {
+  color: lightgray;
+  font-size: 18px;
+  font-weight: 500;
+}
+.div2 {
+  display: flex;
+  flex-direction: row;
+  gap: 10%;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.phone_div {
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+  justify-content: center;
+  align-items: center;
+}
+.phone {
+  font-size: 40px;
+  color: #d58bbf;
+}
+.phone:hover {
+  -webkit-transform: rotateY(360deg);
+  transform: rotateY(360deg);
+  transition: 0.5s;
+}
+.phone_label_div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.phone_label {
+  font-weight: 700;
+  font-size: 20px;
+  color: white;
+}
+.mail_div {
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+  justify-content: center;
+  align-items: center;
+}
+.mail_icon {
+  color: #d58bbf;
+  font-size: 40px;
+}
+.mail_icon:hover {
+  -webkit-transform: rotateY(360deg);
+  transform: rotateY(360deg);
+  transition: 0.5s;
+}
+.mail_label_div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.mail_label {
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+}
+.mail_label:hover {
+  color: #ff5820;
+  transition: 0.5s;
+}
+.phone_label:hover {
+  color: #ff5820;
+  transition: 0.8s;
+}
+.mail_label_font {
+  display: flex;
+  color: darkgrey;
+}
+.office_div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3%;
+}
+.office_label_div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.office_label_font {
+  color: darkgrey;
+}
+.time_icon {
+  color: #d58bbf;
+  font-size: 40px;
+}
+.time_icon:hover {
+  -webkit-transform: rotateY(360deg);
+  transform: rotateY(360deg);
+  transition: 0.5s;
+}
+.hr {
+  width: 98%;
+  border-top: 0.5px dotted lightgray;
+  background-color: transparent;
+}
+.container2 {
+  padding: 3%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+  width: 70%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.con2div1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  row-gap: 5px;
+  width: 30%;
+}
+.aboutus_h {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+.about_para {
+  width: 90%;
+  color: white;
+  font-size: 17px;
+  text-align: justify;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.con2div2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  row-gap: 20px;
+  width: 20%;
+}
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  row-gap: 10px;
+  cursor: pointer;
+}
+.links_style {
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+.links_style:hover {
+  color: #ff5820;
+  transition: 0.8s;
+}
+.li::before {
+  content: ">";
+  color: white;
+}
+@media screen and (max-width: 1030px) {
+  .container1 {
+    gap: 2%;
+  }
+}
+@media screen and (max-width: 951px) {
+  .container1 {
+    flex-direction: column;
+    row-gap: 15px;
+  }
+  .branding {
+    width: 100%;
+  }
+  .div2 {
+    width: 100%;
+  }
+  .con2div1 {
+    width: 35%;
+  }
+  .con2div2 {
+    width: 20%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .mail_label_font {
+    width: 99%;
+  }
+}
+@media screen and (max-width: 501px) {
+  .container2 {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  .con2div1 {
+    width: 100%;
+    align-items: center;
+  }
+  .con2div2 {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 466px) {
+  .div2 {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    row-gap: 15px;
+    width: 90%;
+  }
+}
+@media screen and (max-width: 360px) {
+  .mail_div {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 5px;
+  }
+}
