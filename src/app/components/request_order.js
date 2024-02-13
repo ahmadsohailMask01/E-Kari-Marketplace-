@@ -136,7 +136,9 @@ const Request_Product = ({ title, price }) => {
             />
             <label className={styles.price_label}>
               Your Total Price will be:{" "}
-              <strong>{pkr.format(new_price)} PKR</strong>
+              <strong style={{ color: `#571d46` }}>
+                {pkr.format(new_price)} PKR
+              </strong>
             </label>
             <input
               type="text"

@@ -21,10 +21,10 @@ export default function Header() {
           <Link className={styles.link_style} href="/addProduct">
             Create Item
           </Link>
-          <Link className={styles.link_style} href="/blog">
-            Blogs
+          <Link className={styles.link_style} href="/about">
+            About
           </Link>
-          <Link className={styles.link_style} href="/user">
+          <Link className={styles.link_style} href="/admin_dashboard">
             User
           </Link>
           <Link className={styles.link_style} href="/login">

@@ -18,7 +18,7 @@
   font-size: 50px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  color: #ff5820;
+  color: #571d46;
   text-align: center;
 }
 .form {
@@ -35,7 +35,7 @@
 .submit_button {
   padding: 2%;
   color: white;
-  background-color: #ff5820;
+  background-color: #571d46;
   border: none;
   border-radius: 10px;
   font-size: 20px;
@@ -62,7 +62,7 @@
 }
 .admin_head {
   font-size: 40px;
-  color: #ff5820;
+  color: #571d46;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   font-weight: 600;
@@ -73,7 +73,7 @@
 }
 
 .logout {
-  background-color: #ff5820;
+  background-color: #571d46;
   color: white;
   width: 20%;
   padding: 1%;

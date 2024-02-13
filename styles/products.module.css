@@ -30,7 +30,7 @@
 }
 .select::selection {
   color: white;
-  background-color: #ff5820;
+  background-color: #571d46;
 }
 .icons {
   display: flex;
@@ -76,7 +76,7 @@
   text-align: center;
   font-size: 20px;
   color: white;
-  background-color: #ff5820;
+  background-color: #571d46;
   padding: 1%;
   width: 20%;
   text-decoration: none;
@@ -100,7 +100,7 @@
   align-self: center;
   font-size: 20px;
   color: white;
-  background-color: #ff5820;
+  background-color: #571d46;
   border: none;
   border-radius: 10px;
   width: 40%;

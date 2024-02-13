@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../../../styles/about.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import ceo from "../../../assets/ceo.jpeg";
+import ceo from "../../../assets/ceo.png";
 import {
   BiSolidQuoteSingleLeft,
   BiSolidQuoteSingleRight,
@@ -109,16 +109,13 @@ const About = () => {
         <div className={styles.sec4_container}>
           <span className={styles.tech_intro}>
             <Image src={ceo} className={styles.ceo_picture} alt="CEO_Image" />
-            <span className={styles.ceo_name}>Sohaib Manzoor</span>
-            <span className={styles.ceo_head}>Ceo</span>
+            <span className={styles.ceo_name}>M. Ahmad Sohail</span>
+            <span className={styles.ceo_head}>Developer</span>
           </span>
           <span className={styles.tech_para}>
             <BiSolidQuoteSingleLeft className={styles.comma1} />
-            Now you have the demand for chemical manufacturing or mixing. How do
-            you decide which company is the best choice? Improper selection may
-            lead to long delivery time, poor quality or waste of time and money.
-            If you choose well, you will be surprised to find how much value
-            your partner has added to your production process.
+            Perfection is achieved not when there is nothing more to add, but
+            rather when there is nothing more to take away
             <BiSolidQuoteSingleRight className={styles.comma2} />
           </span>
         </div>
@@ -127,17 +124,22 @@ const About = () => {
         <div className={styles.sec4_container}>
           <span className={styles.tech_intro}>Our Values</span>
           <span className={styles.tech_para}>
-            To manufacture, produce, refine, process, formulate, acquire,
-            convert, sell, distribute, import, export,deal in either as
-            principals or agents in organic and inorganic chemicals
+            Fostering a community-driven approach that prioritizes and
+            celebrates the authenticity and originality of digital artworks,
+            ensuring fair compensation and recognition for artists
           </span>
         </div>
         <div className={styles.sec4_container}>
           <span className={styles.tech_intro}>Our Mission</span>
           <span className={styles.tech_para}>
-            To manufacture, produce, refine, process, formulate, acquire,
-            convert, sell, distribute, import, export,deal in either as
-            principals or agents in organic and inorganic chemicals
+            Fostering creativity and forging connections, our mission is to
+            provide a vibrant digital marketplace where artists can unleash
+            their creativity and connect with a global audience. We believe in
+            empowering creators by offering them a platform to showcase their
+            talent, while also enabling art enthusiasts to discover and acquire
+            unique digital artworks that resonate with their souls. Through
+            meaningful connections and appreciation of diverse art forms, we aim
+            to cultivate a thriving community where inspiration knows no bounds
           </span>
         </div>
       </section>

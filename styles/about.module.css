@@ -25,13 +25,13 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .btn {
-  color: #ff5820;
+  color: #571f46;
   margin-top: 3%;
   text-align: center;
   width: 25%;
   font-size: 25px;
   text-decoration: none;
-  border: 1px solid #ff5820;
+  border: 1px solid #571f46;
   padding: 0.5%;
   border-radius: 10px;
 }
@@ -96,21 +96,21 @@
 .btn2 {
   width: 95%;
   padding: 2%;
-  color: #ff5820;
+  color: #571f46;
   margin-top: 3%;
   text-align: center;
   font-size: 25px;
   text-decoration: none;
-  border: 1px solid #ff5820;
+  border: 1px solid #571f46;
   border-radius: 10px;
 }
 .btn:hover {
-  background-color: #ff5820;
+  background-color: #571f46;
   color: white;
   transition: 1s ease;
 }
 .btn2:hover {
-  background-color: #ff5820;
+  background-color: #571f46;
   color: white;
   transition: 1s ease;
 }
@@ -231,7 +231,7 @@
   width: 80%;
 }
 .tech_intro {
-  color: #ff5820;
+  color: #571f46;
   font-size: 50px;
   font-weight: 800;
   text-align: justify;
@@ -263,7 +263,7 @@
 }
 .ceo_picture {
   width: 250px;
-  height: 250px;
+  height: 200px;
   border-radius: 50%;
   border: 1px solid black;
 }
@@ -277,15 +277,15 @@
 }
 .tech_para::selection {
   color: white;
-  background-color: #ff5820;
+  background-color: #571f46;
 }
 .comma1 {
   width: 100px;
   height: 100px;
-  color: #ff5820;
+  color: #571f46;
 }
 .comma2 {
-  color: #ff5820;
+  color: #571f46;
   width: 60px;
   height: 60px;
   position: absolute;
@@ -305,7 +305,7 @@
 }
 .sec5_head {
   font-size: 40px;
-  color: #ff5820;
+  color: #571f46;
   font-weight: 700;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }

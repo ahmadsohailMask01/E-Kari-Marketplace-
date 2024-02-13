@@ -32,7 +32,7 @@ const AddProduct = () => {
       });
 
       notify.success("Product Created Successfully");
-      router.push("/admin_dashboard");
+      router.push("/products");
       router.refresh();
     } catch (error) {
       notify.error("Failed to create a Product", error);

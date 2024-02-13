@@ -8,9 +8,7 @@ const Admin_Dashboard = () => {
     <>
       <section className={styles.admin_sec}>
         <div className={styles.admin_container}>
-          <label className={styles.admin_head}>
-            Welcome to Admin Dashboard
-          </label>
+          <label className={styles.admin_head}>Welcome to User Dashboard</label>
           <Logout />
         </div>
         <Admin_Products />

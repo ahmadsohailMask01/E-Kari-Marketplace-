@@ -34,12 +34,12 @@ export async function POST(req, res) {
         padding: 2%;
         border-radius: 10px;
         border: 1px solid darkgray;
-        background-color: #f3f3f3;
+        background-color: #571d46;
         box-shadow: 0px 0px 10px lightgray;
+        color: white;
       }
       .order_head {
         align-self: center;
-        color: #ff5820;
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         font-size: 45px;
         font-weight: 700;
@@ -47,20 +47,26 @@ export async function POST(req, res) {
       .label_info {
         font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
           "Lucida Sans", Arial, sans-serif;
-        color: #3b3b3b;
         font-size: 25px;
       }
       .value {
         font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
           sans-serif;
-        color: #282c34;
         font-size: 27px;
+      }
+      .value_msg {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-size: 20px;
+      }
+      .email_bg{
+        background-color:#f3f3f3;
       }
     </style>
   </head>
   <body>
     <div class="order_container">
-      <h1 class="order_head">PAKChem Traders</h1>
+      <h1 class="order_head">E-Kari</h1>
       <h1 class="order_head">Order Summary</h1>
       <label htmlFor="" class="label_info">Product Title:</label>
       <h2 class="value">${Product_title}</h2>
@@ -69,7 +75,7 @@ export async function POST(req, res) {
       <label htmlFor="" class="label_info">Client Name:</label>
       <h4 class="value">${client_name}</h4>
       <label htmlFor="" class="label_info">Client Email:</label>
-      <h4 class="value">${client_email}</h4>
+      <h4 class="value email_bg">${client_email}</h4>
       <label htmlFor="" class="label_info">Client Phone No.</label>
       <h4 class="value">${client_phone}</h4>
       <label htmlFor="" class="label_info">Quantity of Product:</label>
