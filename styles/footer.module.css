@@ -264,4 +264,12 @@
     align-items: flex-start;
     row-gap: 5px;
   }
+  .mail_label_font {
+    width: 80%;
+    overflow-y: scroll;
+  }
+  .div2 {
+    align-self: flex-start;
+    margin-right: 20%;
+  }
 }

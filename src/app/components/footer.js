@@ -36,9 +36,9 @@ const Footer = () => {
                 <label htmlFor="mail" className={styles.mail_label}>
                   Send Us Mail
                 </label>
-                <span className={styles.mail_label_font}>
-                  info.company_mail@gmail.com
-                </span>
+                <p className={styles.mail_label_font}>
+                  info.digitalmarketplace.ekari@gmail.com
+                </p>
               </div>
             </div>
             <div className={styles.office_div}>
