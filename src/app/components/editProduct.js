@@ -5,6 +5,7 @@ import Link from "next/link";
 import { RiArrowGoBackLine } from "react-icons/ri";
 import { toast as notify } from "react-toastify";
 import { useRouter } from "next/navigation";
+import { BASE_API_URL } from "../../../utils/constants";
 
 const EditProduct = ({ id, title, price, description }) => {
   const router = useRouter();
@@ -15,7 +16,7 @@ const EditProduct = ({ id, title, price, description }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await fetch(`http://localhost:3000/api/products/${id}`, {
+      await fetch(`${BASE_API_URL}/api/products/${id}`, {
         method: "PUT",
         headers: {
           "Content-type": "application/json",

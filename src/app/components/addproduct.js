@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 import { toast as notify } from "react-toastify";
+import { BASE_API_URL } from "../../../utils/constants";
 
 const AddProduct = () => {
   const [product_title, setTitle] = useState("");
@@ -19,7 +20,7 @@ const AddProduct = () => {
     e.preventDefault();
 
     try {
-      await fetch("http://localhost:3000/api/products", {
+      await fetch(`${BASE_API_URL}/api/products`, {
         method: "POST",
         headers: {
           "Content-type": "application/json",

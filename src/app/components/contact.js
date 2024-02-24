@@ -7,6 +7,7 @@ import { FiPhoneCall } from "react-icons/fi";
 import { LuMailOpen } from "react-icons/lu";
 import { toast as note } from "react-hot-toast";
 import { useRouter } from "next/navigation";
+import { BASE_API_URL } from "../../../utils/constants";
 
 const Contact = () => {
   const router = useRouter();
@@ -18,7 +19,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await fetch("http://localhost:3000/api/contact", {
+      await fetch(`${BASE_API_URL}/api/contact`, {
         method: "POST",
         headers: {
           "Content-type": "application/json",

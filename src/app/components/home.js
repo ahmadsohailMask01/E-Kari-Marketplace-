@@ -13,6 +13,7 @@ import music from "../../../assets/images/CollectionType/music.png";
 import gamepad from "../../../assets/images/CollectionType/gamepad.png";
 import camera from "../../../assets/images/CollectionType/camera.png";
 import art from "../../../assets/images/CollectionType/art.png";
+import { BASE_API_URL } from "../../../utils/constants";
 
 const MainPage = () => {
   const router = useRouter();
@@ -23,7 +24,7 @@ const MainPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await fetch("http://localhost:3000/api/contact", {
+      await fetch(`${BASE_API_URL}/api/contact`, {
         method: "POST",
         headers: {
           "Content-type": "application/json",

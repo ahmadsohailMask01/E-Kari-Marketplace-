@@ -3,10 +3,11 @@ import styles from "../../../styles/products.module.css";
 import { FaEdit } from "react-icons/fa";
 import Link from "next/link";
 import RemoveButton from "./removeButton";
+import { BASE_API_URL } from "../../../utils/constants";
 
 const getProducts = async () => {
   try {
-    const res = await fetch("http://localhost:3000/api/products", {
+    const res = await fetch(`${BASE_API_URL}/api/products`, {
       cache: "no-store",
     });
 
