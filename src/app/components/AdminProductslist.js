@@ -22,8 +22,7 @@ const getProducts = async () => {
 };
 
 const AdminProductslist = async () => {
-  // const { products } = await getProducts();
-  const products = "";
+  const { products } = await getProducts();
   const pk_currency = Intl.NumberFormat("en-PK", {
     style: "currency",
     currency: "PKR",
