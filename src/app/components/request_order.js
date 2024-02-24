@@ -5,6 +5,7 @@ import Link from "next/link";
 import { RiArrowGoBackLine } from "react-icons/ri";
 import { toast as notify } from "react-toastify";
 import { useRouter } from "next/navigation";
+import { BASE_API_URL } from "../../../utils/constants";
 
 const Request_Product = ({ title, price }) => {
   const router = useRouter();
@@ -20,7 +21,7 @@ const Request_Product = ({ title, price }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await fetch("http://localhost:3000/api/request_order", {
+      await fetch(`${BASE_API_URL}/api/request_order`, {
         method: "POST",
         headers: {
           "Content-type": "application/json",

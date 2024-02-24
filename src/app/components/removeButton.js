@@ -4,6 +4,7 @@ import styles from "../../../styles/products.module.css";
 import { MdDelete } from "react-icons/md";
 import { toast as note } from "react-hot-toast";
 import { useRouter } from "next/navigation";
+import { BASE_API_URL } from "../../../utils/constants";
 
 const RemoveButton = ({ id }) => {
   const router = useRouter();
@@ -12,7 +13,7 @@ const RemoveButton = ({ id }) => {
     const confirmed = confirm("Are You Sure?");
     try {
       if (confirmed) {
-        await fetch(`http://localhost:3000/api/products?id=${id}`, {
+        await fetch(`${BASE_API_URL}/api/products?id=${id}`, {
           method: "DELETE",
         });
 
