@@ -7,10 +7,8 @@ import {
   BiSolidQuoteSingleLeft,
   BiSolidQuoteSingleRight,
 } from "react-icons/bi";
-import { MdEngineering } from "react-icons/md";
-import { GiWallet } from "react-icons/gi";
-import { AiFillExperiment } from "react-icons/ai";
-import { SiFsecure } from "react-icons/si";
+import { FaPaintBrush, FaPhotoVideo, FaShareAlt } from "react-icons/fa";
+import { CgScreen } from "react-icons/cg";
 
 const About = () => {
   return (
@@ -59,7 +57,7 @@ const About = () => {
         <div className={styles.des1} />
         <div className={styles.des2} />
         <div className={styles.sec3_head_container}>
-          <span className={styles.main_head1}>Provide Industrial Solution</span>
+          <span className={styles.main_head1}>Advertising Solutions</span>
           <br />
           <span className={styles.sub_2}>
             We Are Able To Uarantee A Very High Level Of Satisfaction For Our
@@ -69,16 +67,16 @@ const About = () => {
         <div className={styles.sec3_container}>
           <div className={styles.row}>
             <div className={styles.row_col}>
-              <MdEngineering className={styles.icon} />
-              <span className={styles.icon_head}>Perfect Engineer</span>
+              <FaPaintBrush className={styles.icon} />
+              <span className={styles.icon_head}>Creative Advertising</span>
               <span className={styles.icon_para}>
                 Ultrices leo dictum integer quam nulla morbi adipiscing ac
                 suspendisse neque vel non egestas commodo sit felis consectetur.
               </span>
             </div>
             <div className={styles.row_col}>
-              <GiWallet className={styles.icon} />
-              <span className={styles.icon_head}>Reasonable</span>
+              <FaPhotoVideo className={styles.icon} />
+              <span className={styles.icon_head}>Digital Advertising</span>
               <span className={styles.icon_para}>
                 Ultrices leo dictum integer quam nulla morbi adipiscing ac
                 suspendisse neque vel non egestas commodo sit felis consectetur.
@@ -87,16 +85,16 @@ const About = () => {
           </div>
           <div className={styles.row}>
             <div className={styles.row_col}>
-              <AiFillExperiment className={styles.icon} />
-              <span className={styles.icon_head}>Quality Products</span>
+              <CgScreen className={styles.icon} />
+              <span className={styles.icon_head}>Traditional</span>
               <span className={styles.icon_para}>
                 Ultrices leo dictum integer quam nulla morbi adipiscing ac
                 suspendisse neque vel non egestas commodo sit felis consectetur.
               </span>
             </div>
             <div className={styles.row_col}>
-              <SiFsecure className={styles.icon} />
-              <span className={styles.icon_head}>Safe & Secure</span>
+              <FaShareAlt className={styles.icon} />
+              <span className={styles.icon_head}>Social Media</span>
               <span className={styles.icon_para}>
                 Ultrices leo dictum integer quam nulla morbi adipiscing ac
                 suspendisse neque vel non egestas commodo sit felis consectetur.

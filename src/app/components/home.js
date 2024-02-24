@@ -5,17 +5,14 @@ import styles from "../../../styles/home.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import Cards from "./cards";
-import icon1 from "../../../assets/icon1.svg";
-import icon2 from "../../../assets/icon2.svg";
-import icon3 from "../../../assets/icon3.svg";
-import { MdEngineering } from "react-icons/md";
-import { GiWallet } from "react-icons/gi";
-import { AiFillExperiment } from "react-icons/ai";
-import { SiFsecure } from "react-icons/si";
 import { useRouter } from "next/navigation";
 import { toast as notify } from "react-toastify";
-import val1 from "../../../assets/val1.jpg";
-import mis1 from "../../../assets/mis1.jpg";
+import Banner from "../../../assets/images/Banner/Banner.png";
+import vip from "../../../assets/images/CollectionType/vip.png";
+import music from "../../../assets/images/CollectionType/music.png";
+import gamepad from "../../../assets/images/CollectionType/gamepad.png";
+import camera from "../../../assets/images/CollectionType/camera.png";
+import art from "../../../assets/images/CollectionType/art.png";
 
 const MainPage = () => {
   const router = useRouter();
@@ -45,235 +42,68 @@ const MainPage = () => {
   };
   return (
     <>
-      <section className={styles.section1}>
+      <section className={styles.sec1}>
         <div className={styles.container}>
-          <div className={styles.branding}>
-            <h2 className={styles.h2}>We are Top</h2>
-            <h1 className={styles.h1}>Industrial Leader</h1>
-            <p className={styles.p}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
-              ab, labore delectus quam alias consectetur deleniti odit odio
-              molestias dignissimos.
-            </p>
-            <Link
-              href="/products"
-              className={styles.link_button}
-              title="See Products"
-            >
-              We Deliever Quality Products
-            </Link>
-          </div>
-          <div className={styles.container2}>
-            <div className={styles.card}>
-              <div className={styles.card_container}>
-                <h3 className={styles.h3}>Chemical Research</h3>
-                <span className={styles.h4}>
-                  Best Chemical Research Industry
-                </span>
+          <div className={styles.banner_sec}>
+            <div className={styles.Banner_text}>
+              <h1>Discover Unique Digital Treasure.</h1>
+              <h5>Explore Collect & Sell</h5>
+              <h4>Get in touch with world of imagination</h4>
+              <button className={styles.btn_classic}>Explore Now</button>
+              <div className={styles.RankingCounts}>
+                <div className={styles.Count}>
+                  <h1>98K+</h1>
+                  <h5>Artwork</h5>
+                </div>
+                <div className={styles.Count}>
+                  <h1>12K+</h1>
+                  <h5>Auction</h5>
+                </div>
+                <div className={styles.Count}>
+                  <h1>15K+</h1>
+                  <h5>Artist</h5>
+                </div>
               </div>
-              <div className={styles.clip} id="clip" />
             </div>
+          </div>
+          <div className={styles.banner_img}>
+            <Image className={styles.img2} src={Banner} />
+          </div>
+        </div>
+      </section>
 
-            <div className={styles.card}>
-              <div className={styles.card_container}>
-                <h3 className={styles.h3}>Chemical Research</h3>
-                <span className={styles.h4}>
-                  Best Chemical Research Industry
-                </span>
-              </div>
-              <div className={styles.clip} id="clip" />
-            </div>
-            <div className={styles.card}>
-              <div className={styles.card_container}>
-                <h3 className={styles.h3}>Chemical Research</h3>
-                <span className={styles.h4}>
-                  Best Chemical Research Industry
-                </span>
-              </div>
-              <div className={styles.clip} id="clip" />
-            </div>
+      <div className={styles.TypesCollection_container}>
+        <div className={styles.Collection}>
+          <div className={styles.collectionimg}>
+            <Image className={styles.typeImg} src={vip} />
           </div>
+          <h3>Membership</h3>
         </div>
-      </section>
-      <section className={styles.section2}>
-        <div className={styles.container3}>
-          <div className={styles.column_div}>
-            <span className={styles.p1}>Who we are</span>
-            <span className={styles.p2}>Provide Industrial Solution</span>
-            <span className={styles.p3}>
-              We Are Able To Uarantee A Very High Level Of Satisfaction For Our
-              Clients. We Offer The Cleanest Line Of Services.
-            </span>
+        <div className={styles.Collection}>
+          <div className={styles.collectionimg}>
+            <Image className={styles.typeImg} src={gamepad} />
           </div>
+          <h3>Gaming</h3>
         </div>
-        <div className={styles.container4}>
-          <Cards
-            src={icon1}
-            card_title={"Mechanical"}
-            card_paragraph={
-              "pellentesque id nibh tortor id aliquet lectus proin nibh nisl condimentum id venenatis a condimentum vitae sapien pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas"
-            }
-          />
-          <Cards
-            src={icon2}
-            card_title={"Mining Industry"}
-            card_paragraph={
-              "pellentesque id nibh tortor id aliquet lectus proin nibh nisl condimentum id venenatis a condimentum vitae sapien pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas"
-            }
-          />
-          <Cards
-            src={icon3}
-            card_title={"Chemical Products"}
-            card_paragraph={
-              "pellentesque id nibh tortor id aliquet lectus proin nibh nisl condimentum id venenatis a condimentum vitae sapien pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas"
-            }
-          />
-        </div>
-      </section>
-      <section className={styles.section3}>
-        <div className={styles.container5}>
-          <div className={styles.information_div}>
-            <div className={styles.info_div_container}>
-              <span className={styles.info_div_heading}>
-                We are leader in Industrial Market since 2001
-              </span>
-              <span className={styles.information_para}>
-                We are able to guarantee a very high level of satisfaction for
-                our clients. Pharetra libero non facilisis imperdiet, mi augue
-                feugiat nisl sit amet mollis enim velit Vestibulum fringilla
-                nulla ultricies Respondeo dicendum esset iustus.
-              </span>
-              <div className={styles.row1}>
-                <div className={styles.properties_container}>
-                  <MdEngineering className={styles.engineer} />
-                  <div className={styles.user_info}>
-                    <span className={styles.name}>Perfect Engineer</span>
-                    <span className={styles.description_info}>
-                      We are able to guarantee satisfaction for our clients
-                    </span>
-                  </div>
-                </div>
-                <div className={styles.properties_container}>
-                  <GiWallet className={styles.engineer} />
-                  <div className={styles.user_info}>
-                    <span className={styles.name}>Reasonable</span>
-                    <span className={styles.description_info}>
-                      We are able to guarantee satisfaction for our clients
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div className={styles.row1}>
-                <div className={styles.properties_container}>
-                  <AiFillExperiment className={styles.engineer} />
-                  <div className={styles.user_info}>
-                    <span className={styles.name}>Quality Products</span>
-                    <span className={styles.description_info}>
-                      We are able to guarantee satisfaction for our clients
-                    </span>
-                  </div>
-                </div>
-                <div className={styles.properties_container}>
-                  <SiFsecure className={styles.engineer} />
-                  <div className={styles.user_info}>
-                    <span className={styles.name}>Safe & Secure</span>
-                    <span className={styles.description_info}>
-                      We are able to guarantee satisfaction for our clients
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div className={styles.Collection}>
+          <div className={styles.collectionimg}>
+            <Image className={styles.typeImg} src={camera} />
           </div>
+          <h3>Photography</h3>
         </div>
-      </section>
-      <section className={styles.section4}>
-        <div className={styles.container6}>
-          <hr className={styles.hr} />
-          <span className={styles.trusted_head}>Our Trusted Partners</span>
-          <hr className={styles.hr} />
-        </div>
-        <div className={styles.partners_container}>
-          <span className={styles.partners_name}>PAKChem</span>
-          <span className={styles.partners_name}>Indurance</span>
-          <span className={styles.partners_name}>Chemixel</span>
-          <span className={styles.partners_name}>Blenders</span>
-        </div>
-      </section>
-      <section className={styles.section5}>
-        <div className={styles.quote_container}>
-          <div className={styles.values}>
-            <Image
-              src={val1}
-              className={styles.values_img}
-              alt="values_image"
-            />
-            <div className={styles.values_content}>
-              <span className={styles.values_head}>Our Values</span>
-              <span className={styles.values_desc}>
-                To manufacture, produce, refine, process, formulate, acquire,
-                convert, sell, distribute, import, export,deal in either as
-                principals or agents in organic and inorganic chemicals
-              </span>
-            </div>
+        <div className={styles.Collection}>
+          <div className={styles.collectionimg}>
+            <Image className={styles.typeImg} src={art} />
           </div>
-          <div className={styles.values}>
-            <Image
-              src={mis1}
-              className={styles.values_img}
-              alt="Mission_image"
-            />
-            <div className={styles.values_content}>
-              <span className={styles.values_head}>Our Mission</span>
-              <span className={styles.values_desc}>
-                To manufacture, produce, refine, process, formulate, acquire,
-                convert, sell, distribute, import, export,deal in either as
-                principals or agents in organic and inorganic chemicals
-              </span>
-            </div>
-          </div>
-          <form onSubmit={handleSubmit} className={styles.Form}>
-            <span className={styles.Form_head}>Request A Quote</span>
-            <div className={styles.input_holder}>
-              <input
-                type="text"
-                onChange={(e) => set_name(e.target.value)}
-                value={name}
-                placeholder="Name"
-                className={styles.input}
-              />
-              <input
-                type="email"
-                onChange={(e) => set_email(e.target.value)}
-                value={email}
-                placeholder="Email"
-                className={styles.input}
-              />
-              <input
-                type="text"
-                onChange={(e) => set_phone(e.target.value)}
-                value={phone}
-                placeholder="Phone"
-                className={styles.input}
-              />
-              <textarea
-                type="text"
-                onChange={(e) => set_message(e.target.value)}
-                value={message}
-                placeholder="Message"
-                className={`${styles.input} ${styles.textarea}`}
-              />
-              <button
-                type="submit"
-                className={styles.submit}
-                title="Submit Details"
-              >
-                Submit Request
-              </button>
-            </div>
-          </form>
+          <h3>Art</h3>
         </div>
-      </section>
+        <div className={styles.Collection}>
+          <div className={styles.collectionimg}>
+            <Image className={styles.typeImg} src={music} />
+          </div>
+          <h3>PFPs</h3>
+        </div>
+      </div>
     </>
   );
 };

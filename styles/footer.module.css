@@ -252,10 +252,21 @@
 @media screen and (max-width: 466px) {
   .div2 {
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
+    align-items: center;
     row-gap: 15px;
     width: 90%;
+  }
+  .mail_label_font {
+    display: block;
+    width: 100%;
+    overflow-y: scroll;
+  }
+  .mail_div {
+    width: 90%;
+    justify-content: center;
+  }
+  .mail_label_div {
+    width: 50%;
   }
 }
 @media screen and (max-width: 360px) {
@@ -265,8 +276,9 @@
     row-gap: 5px;
   }
   .mail_label_font {
+    display: block;
     width: 80%;
-    overflow-y: scroll;
+    overflow: hidden;
   }
   .div2 {
     align-self: flex-start;
