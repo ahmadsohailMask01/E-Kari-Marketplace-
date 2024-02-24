@@ -8,6 +8,7 @@ import { BASE_API_URL } from "../../../utils/constants";
 const getProducts = async () => {
   try {
     const res = await fetch(`${BASE_API_URL}/api/products`, {
+      method: "GET",
       cache: "no-store",
     });
 
