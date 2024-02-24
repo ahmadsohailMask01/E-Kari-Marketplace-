@@ -1,10 +1,11 @@
 import React from "react";
 import styles from "../../../styles/products.module.css";
 import Link from "next/link";
+import { BASE_API_URL } from "../../../utils/constants";
 
 const getProducts = async () => {
   try {
-    const res = await fetch("http://localhost:3000/api/products", {
+    const res = await fetch(`${BASE_API_URL}/api/products`, {
       cache: "no-store",
     });
 
