@@ -1,9 +1,10 @@
 import React from "react";
 import Request_Product from "../../components/request_order";
+import { BASE_API_URL } from "../../../../utils/constants";
 
 const getProductbyId = async (id) => {
   try {
-    const res = await fetch(`http://localhost:3000/api/products/${id}`, {
+    const res = await fetch(`${BASE_API_URL}/api/products/${id}`, {
       cache: "no-store",
     });
     if (!res.ok) {
