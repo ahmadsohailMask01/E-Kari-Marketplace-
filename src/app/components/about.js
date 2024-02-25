@@ -145,21 +145,21 @@ const About = () => {
         <div className={styles.sec5_container}>
           <span className={styles.sec5_head}>Our Clients</span>
           <div className={styles.clients_name}>
-            <span className={styles.brands}>PAKChem</span>
-            <span className={styles.brands}>Chemixel</span>
-            <span className={styles.brands}>Blenders</span>
-            <span className={styles.brands}>Indurance</span>
-            <span className={styles.brands}>Mixels</span>
+            <span className={styles.brands}>Superior</span>
+            <span className={styles.brands}>AURLab</span>
+            <span className={styles.brands}>DevFusion</span>
+            <span className={styles.brands}>PU</span>
+            <span className={styles.brands}>UCP</span>
           </div>
           <div className={styles.clients_holder}>
             <div className={styles.clients_alternate}>
-              <span className={styles.brands}>PAKChem</span>
-              <span className={styles.brands}>Chemixel</span>
-              <span className={styles.brands}>Blenders</span>
+              <span className={styles.brands}>Superior</span>
+              <span className={styles.brands}>AURLab</span>
+              <span className={styles.brands}>DevFusion</span>
             </div>
             <div className={styles.clients_alternate}>
-              <span className={styles.brands}>Indurance</span>
-              <span className={styles.brands}>Mixels</span>
+              <span className={styles.brands}>PU</span>
+              <span className={styles.brands}>UCP</span>
             </div>
           </div>
         </div>
