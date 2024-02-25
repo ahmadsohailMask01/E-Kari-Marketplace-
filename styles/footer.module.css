@@ -15,12 +15,11 @@
   justify-content: center;
   align-items: center;
   gap: 10%;
-  width: 70%;
 }
 .branding {
   display: flex;
   flex-direction: row;
-  width: 30%;
+
   justify-content: center;
   align-items: center;
   gap: 2%;
@@ -36,7 +35,6 @@
   align-items: flex-start;
   color: white;
   cursor: pointer;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .main_head {
   font-size: 27px;
@@ -53,8 +51,6 @@
   gap: 10%;
   justify-content: center;
   align-items: center;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 .phone_div {
   display: flex;
@@ -65,7 +61,7 @@
 }
 .phone {
   font-size: 40px;
-  color: #d58bbf;
+  color: #f3f3f3;
 }
 .phone:hover {
   -webkit-transform: rotateY(360deg);
@@ -90,7 +86,7 @@
   align-items: center;
 }
 .mail_icon {
-  color: #d58bbf;
+  color: #f3f3f3;
   font-size: 40px;
 }
 .mail_icon:hover {
@@ -109,11 +105,11 @@
   color: white;
 }
 .mail_label:hover {
-  color: #ff5820;
+  color: #311342;
   transition: 0.5s;
 }
 .phone_label:hover {
-  color: #ff5820;
+  color: #311342;
   transition: 0.8s;
 }
 .mail_label_font {
@@ -136,7 +132,7 @@
   color: darkgrey;
 }
 .time_icon {
-  color: #d58bbf;
+  color: #f3f3f3;
   font-size: 40px;
 }
 .time_icon:hover {
@@ -150,14 +146,13 @@
   background-color: transparent;
 }
 .container2 {
-  padding: 3%;
+  padding: 5%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 10%;
-  width: 70%;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  gap: 3%;
+  justify-content: space-evenly;
 }
 .con2div1 {
   display: flex;
@@ -165,7 +160,7 @@
   align-items: flex-start;
   justify-content: center;
   row-gap: 5px;
-  width: 30%;
+  width: 20%;
 }
 .aboutus_h {
   color: white;
@@ -185,7 +180,7 @@
   align-items: flex-start;
   justify-content: center;
   row-gap: 20px;
-  width: 20%;
+  width: 10%;
 }
 .links {
   display: flex;
@@ -201,7 +196,7 @@
   font-size: 17px;
 }
 .links_style:hover {
-  color: #ff5820;
+  color: #311342;
   transition: 0.8s;
 }
 .li::before {
@@ -252,21 +247,10 @@
 @media screen and (max-width: 466px) {
   .div2 {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: center;
     row-gap: 15px;
     width: 90%;
-  }
-  .mail_label_font {
-    display: block;
-    width: 100%;
-    overflow-y: scroll;
-  }
-  .mail_div {
-    width: 90%;
-    justify-content: center;
-  }
-  .mail_label_div {
-    width: 50%;
   }
 }
 @media screen and (max-width: 360px) {
@@ -274,14 +258,5 @@
     flex-direction: column;
     align-items: flex-start;
     row-gap: 5px;
-  }
-  .mail_label_font {
-    display: block;
-    width: 80%;
-    overflow: hidden;
-  }
-  .div2 {
-    align-self: flex-start;
-    margin-right: 20%;
   }
 }
