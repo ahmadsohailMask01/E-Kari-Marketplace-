@@ -8,7 +8,7 @@ import { toast as note } from "react-hot-toast";
 import { toast as notify } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const Admin_Login = () => {
+const User_Login = () => {
   const [Username, setusername] = useState("");
   const [Password, setpassword] = useState("");
   const router = useRouter();
@@ -73,4 +73,4 @@ const Admin_Login = () => {
   );
 };
 
-export default Admin_Login;
+export default User_Login;

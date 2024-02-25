@@ -21,7 +21,7 @@ const getProducts = async () => {
   }
 };
 
-const AdminProductslist = async () => {
+const UserProductslist = async () => {
   const { products } = await getProducts();
   const pk_currency = Intl.NumberFormat("en-PK", {
     style: "currency",
@@ -68,4 +68,4 @@ const AdminProductslist = async () => {
   );
 };
 
-export default AdminProductslist;
+export default UserProductslist;

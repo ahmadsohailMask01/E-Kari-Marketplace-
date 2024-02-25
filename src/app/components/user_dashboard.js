@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "../../../styles/admin.module.css";
-import Admin_Products from "./Admin_products";
+import User_Products from "./User_products";
 import Logout from "./logout";
 
-const Admin_Dashboard = () => {
+const User_Dashboard = () => {
   return (
     <>
       <section className={styles.admin_sec}>
@@ -11,10 +11,10 @@ const Admin_Dashboard = () => {
           <label className={styles.admin_head}>Welcome to User Dashboard</label>
           <Logout />
         </div>
-        <Admin_Products />
+        <User_Products />
       </section>
     </>
   );
 };
 
-export default Admin_Dashboard;
+export default User_Dashboard;

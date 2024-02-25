@@ -1,12 +1,12 @@
 "use client";
 import React, { useEffect } from "react";
-import AdminProductslist from "./AdminProductslist";
+import UserProductslist from "./UserProductsList";
 import styles from "../../../styles/products.module.css";
 import loading from "../../../assets/loading.gif";
 import Link from "next/link";
 import Image from "next/image";
 
-const Admin_Products = () => {
+const User_Products = () => {
   useEffect(() => {
     const loading_func = () => {
       document.getElementById("loading").style.display = "none";
@@ -25,11 +25,11 @@ const Admin_Products = () => {
           <Image src={loading} className={styles.loading_gif}></Image>
         </div>
         <div className={styles.products_container} id="container">
-          <AdminProductslist />
+          <UserProductslist />
         </div>
       </section>
     </>
   );
 };
 
-export default Admin_Products;
+export default User_Products;
