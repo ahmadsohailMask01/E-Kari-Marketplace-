@@ -11,7 +11,7 @@ const Logout = () => {
     e.preventDefault();
     try {
       Cookies.remove("loggedin");
-      router.push("/admin_login");
+      router.push("/user_login");
     } catch (error) {
       console.log(error);
     }
