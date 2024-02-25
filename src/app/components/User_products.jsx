@@ -7,13 +7,11 @@ import Link from "next/link";
 import Image from "next/image";
 
 const User_Products = () => {
-  useEffect(() => {
     const loading_func = () => {
       document.getElementById("loading").style.display = "none";
       document.getElementById("container").style.display = "flex";
     };
     setTimeout(loading_func, 2000);
-  }, []);
   return (
     <>
       <section className={styles.section_products}>
