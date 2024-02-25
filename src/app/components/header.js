@@ -50,10 +50,10 @@ export default function Header() {
             </Link>
           </div>
           <div className={styles.NavBarLinks_500}>
-            <Link className={styles.link_style} href="/admin_dashboard">
+            <Link className={styles.link_style} href="/user_dashboard">
               User
             </Link>
-            <Link className={styles.link_style} href="/login">
+            <Link className={styles.link_style} href="/user_login">
               Login
             </Link>
             <Link className={styles.link_style} href="/signup">
