@@ -118,7 +118,9 @@
   display: flex;
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 96%, 0% 100%);
-  background-color: #26262c;
+  background: url("../assets/purplebg.gif");
+  background-repeat: no repeat;
+  background-size: cover;
   width: 100%;
   flex-direction: column;
   justify-content: center;
@@ -128,7 +130,7 @@
 }
 .des1 {
   clip-path: polygon(100% 0, 31% 51%, 100% 100%);
-  background-color: #2ccab9;
+  background-color: #f3f3f3;
   width: 20%;
   height: 300px;
   align-self: flex-end;
@@ -138,7 +140,7 @@
 }
 .des2 {
   clip-path: polygon(0 0, 73% 50%, 0 100%);
-  background-color: #2951d5;
+  background-color: #311342;
   width: 30%;
   height: 500px;
   align-self: flex-end;
