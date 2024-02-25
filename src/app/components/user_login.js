@@ -38,14 +38,14 @@ const User_Login = () => {
       <section className={styles.admin_form_sec}>
         <div className={styles.admin_form_container}>
           <h1>{message}</h1>
-          <label className={styles.form_label}>Admin Login Form</label>
+          <label className={styles.form_label}>User Login Form</label>
           <form className={styles.form}>
             <input
               className={styles.input}
               type="text"
               name="Username"
               required={true}
-              placeholder="Admin Username"
+              placeholder="Username"
               value={Username}
               onChange={(e) => setusername(e.target.value)}
             />
@@ -54,7 +54,7 @@ const User_Login = () => {
               type="password"
               name="Password"
               required={true}
-              placeholder="Admin Password"
+              placeholder="Password"
               value={Password}
               onChange={(e) => setpassword(e.target.value)}
             />
