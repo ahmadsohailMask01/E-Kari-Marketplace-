@@ -1,9 +1,12 @@
+"use client";
 import Link from "next/link";
 import styles from "../../../styles/header.module.css";
 import logo from "../../../assets/images/Logo/Logo.png";
 import Image from "next/image";
+import { signIn, signOut, useSession } from "next-auth/react";
 
 export default function Header() {
+  const { status } = useSession();
   return (
     <nav className={styles.nav}>
       <div className={styles.header}>
@@ -24,15 +27,25 @@ export default function Header() {
           <Link className={styles.link_style} href="/about">
             About
           </Link>
-          <Link className={styles.link_style} href="/user_dashboard">
+          <Link className={styles.link_style} href="/user">
             User
           </Link>
-          <Link className={styles.link_style} href="/user_login">
-            Login
-          </Link>
-          <Link className={styles.link_style} href="/signup">
-            Register
-          </Link>
+          {status === "authenticated" ? (
+            <>
+              <button onClick={() => signOut()} className={styles.link_style}>
+                Logout
+              </button>
+            </>
+          ) : (
+            <>
+              <Link className={styles.link_style} href="/user_login">
+                Login
+              </Link>
+              <Link className={styles.link_style} href="/signup">
+                Register
+              </Link>
+            </>
+          )}
         </div>
         <div className={styles.col_500}>
           <div className={styles.NavBarLinks_500}>

@@ -5,6 +5,7 @@ import Footer from "./components/footer";
 import { Bounce, ToastContainer } from "react-toastify";
 import { Toaster } from "react-hot-toast";
 import "react-toastify/dist/ReactToastify.css";
+import { NextAuthProvider } from "./Providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,27 +19,29 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className} style={{ padding: `0%`, margin: `0%` }}>
-        <nav>
-          <Header />
-        </nav>
-        <main>{children}</main>
-        <ToastContainer
-          position="top-right"
-          autoClose={5000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          theme="colored"
-          transition={Bounce}
-        />
-        <Toaster richColors />
-        <footer>
-          <Footer />
-        </footer>
+        <NextAuthProvider>
+          <nav>
+            <Header />
+          </nav>
+          <main>{children}</main>
+          <ToastContainer
+            position="top-right"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="colored"
+            transition={Bounce}
+          />
+          <Toaster richColors />
+          <footer>
+            <Footer />
+          </footer>
+        </NextAuthProvider>
       </body>
     </html>
   );

@@ -41,6 +41,38 @@
   font-size: 20px;
   cursor: pointer;
 }
+.google_div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #571d46;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+  padding: 0%;
+}
+.google_icon_div {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border: 1px solid darkgrey;
+  flex-grow: 0.5;
+  align-items: center;
+  padding: 1%;
+}
+.google_label_div {
+  background-color: #571d46;
+  border-radius: 20px;
+  font-size: 18px;
+  text-align: center;
+  color: #f3f3f3;
+  flex-grow: 2;
+  padding: 1%;
+}
 .submit_button:hover {
   background-color: #191d33;
   transition: 0.8s ease-in-out;

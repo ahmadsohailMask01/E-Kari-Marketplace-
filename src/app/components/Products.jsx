@@ -1,5 +1,4 @@
-"use client";
-import React, { useEffect } from "react";
+import React from "react";
 import Productslist from "./Products_List";
 import styles from "../../../styles/products.module.css";
 import loading from "../../../assets/loading.gif";
@@ -7,11 +6,11 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Products = () => {
-  const loading_func = () => {
-    document.getElementById("loading").style.display = "none";
-    document.getElementById("container").style.display = "flex";
-  };
-  setTimeout(loading_func, 2000);
+  // const loading_func = () => {
+  //   document.getElementById("loading").style.display = "none";
+  //   document.getElementById("container").style.display = "flex";
+  // };
+  // setTimeout(loading_func, 2000);
   return (
     <>
       <section className={styles.section_products}>
