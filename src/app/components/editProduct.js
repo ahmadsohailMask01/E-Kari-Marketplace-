@@ -3,33 +3,16 @@ import React, { useState } from "react";
 import styles from "../../../styles/addProduct.module.css";
 import Link from "next/link";
 import { RiArrowGoBackLine } from "react-icons/ri";
-import { toast as notify } from "react-toastify";
-import { useRouter } from "next/navigation";
-import { BASE_API_URL } from "../../../utils/constants";
+import Edit from "./edit";
 
 const EditProduct = ({ id, title, price, description }) => {
-  const router = useRouter();
   const [newTitle, setNewTitle] = useState(title);
   const [newPrice, setNewPrice] = useState(price);
   const [newDescription, setNewDescription] = useState(description);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      await fetch(`${BASE_API_URL}/api/products/${id}`, {
-        method: "PUT",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify({ newTitle, newPrice, newDescription }),
-      });
-
-      notify.success("Product Updated Successfully!");
-      router.push("/admin_dashboard");
-      router.refresh();
-    } catch (error) {
-      notify.error("Failed to Update the Product", error);
-    }
+    Edit(id, newTitle, newPrice, newDescription);
   };
   return (
     <>

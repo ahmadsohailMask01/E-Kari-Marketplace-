@@ -1,17 +1,12 @@
-"use client";
-
 import React from "react";
-import { useRouter } from "next/navigation";
 import styles from "../../../styles/admin.module.css";
 import Cookies from "js-cookie";
 
 const Logout = () => {
-  const router = useRouter();
   const Log_out = (e) => {
     e.preventDefault();
     try {
       Cookies.remove("loggedin");
-      router.push("/user_login");
     } catch (error) {
       console.log(error);
     }

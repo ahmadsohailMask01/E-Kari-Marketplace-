@@ -4,40 +4,15 @@ import React, { useState } from "react";
 import styles from "../../../styles/addProduct.module.css";
 import { RiArrowGoBackLine } from "react-icons/ri";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-
-import { toast as notify } from "react-toastify";
-import { BASE_API_URL } from "../../../utils/constants";
+import handleSubmit from "./post";
 
 const AddProduct = () => {
   const [product_title, setTitle] = useState("");
   const [product_price, setPrice] = useState("");
   const [product_description, setDescription] = useState("");
-  const router = useRouter();
-  const [active, setActive] = useState(false);
-
-  const handleSubmit = async (e) => {
+  const handle = (e) => {
     e.preventDefault();
-
-    try {
-      await fetch(`${BASE_API_URL}/api/products`, {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify({
-          product_title,
-          product_price,
-          product_description,
-        }),
-      });
-
-      notify.success("Product Created Successfully");
-      router.push("/products");
-      router.refresh();
-    } catch (error) {
-      notify.error("Failed to create a Product", error);
-    }
+    handleSubmit(product_title, product_price, product_description);
   };
 
   return (
@@ -50,7 +25,7 @@ const AddProduct = () => {
           <label className={styles.form_head}>
             Here You can Add your Product
           </label>
-          <form onSubmit={handleSubmit} className={styles.form}>
+          <form className={styles.form} onSubmit={handle}>
             <input
               type="text"
               onChange={(e) => setTitle(e.target.value)}
@@ -78,7 +53,6 @@ const AddProduct = () => {
               type="submit"
               className={styles.button}
               title="Create Product"
-              onClick={() => setActive(!active)}
             >
               Create!
             </button>

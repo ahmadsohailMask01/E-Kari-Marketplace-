@@ -11,6 +11,7 @@ const Products = () => {
   //   document.getElementById("container").style.display = "flex";
   // };
   // setTimeout(loading_func, 2000);
+
   return (
     <>
       <section className={styles.section_products}>

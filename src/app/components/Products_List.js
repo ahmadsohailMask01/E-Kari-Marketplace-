@@ -21,7 +21,6 @@ const getProducts = async () => {
 };
 
 const Productslist = async () => {
-  
   const { products } = await getProducts();
   console.log(products);
   const curr = Intl.NumberFormat("en-PK", {

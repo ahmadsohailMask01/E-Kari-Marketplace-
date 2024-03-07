@@ -2,14 +2,29 @@ import React from "react";
 import styles from "../../../styles/admin.module.css";
 import User_Products from "./User_products.jsx";
 import Logout from "./logout";
+import { useSession } from "next-auth/react";
+import Image from "next/image";
 
 const User_Dashboard = () => {
+  const { data: session } = useSession();
   return (
     <>
       <section className={styles.admin_sec}>
         <div className={styles.admin_container}>
-          <label className={styles.admin_head}>Welcome to User Dashboard</label>
-          <Logout />
+          <div className={styles.admin_head}>
+            <Image
+              src={session?.user?.image}
+              width={100}
+              height={100}
+              style={{ borderRadius: `50%` }}
+            ></Image>
+            <div className={styles.user_info}>
+              <label>Welcome {session?.user?.name}</label>
+              <span className={styles.email_label}>
+                Email: {session?.user?.email}
+              </span>
+            </div>
+          </div>
         </div>
         <User_Products />
       </section>
