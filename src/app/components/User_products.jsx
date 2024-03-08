@@ -1,26 +1,18 @@
 import React from "react";
 import UserProductslist from "./UserProductsList";
 import styles from "../../../styles/products.module.css";
-import loading from "../../../assets/loading.gif";
 import Link from "next/link";
 import Image from "next/image";
+import Load from "./load";
 
 const User_Products = () => {
-  // const loading_func = () => {
-  //   document.getElementById("loading").style.display = "none";
-  //   document.getElementById("container").style.display = "flex";
-  // };
-  // setTimeout(loading_func, 2000);
   return (
     <>
       <section className={styles.section_products}>
         <Link href={"/addProduct"} className={styles.btn} title="Add Product">
           Add Product
         </Link>
-        <div className={styles.load} id="loading">
-          <span>Loading</span>
-          <Image src={loading} className={styles.loading_gif}></Image>
-        </div>
+        <Load />
         <div className={styles.products_container} id="container">
           <UserProductslist />
         </div>

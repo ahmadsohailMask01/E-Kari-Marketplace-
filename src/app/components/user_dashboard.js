@@ -1,8 +1,6 @@
-"use client";
 import React from "react";
 import styles from "../../../styles/admin.module.css";
 import User_Products from "./User_products.jsx";
-import Logout from "./logout";
 import { useSession } from "next-auth/react";
 import Image from "next/image";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import Products from "../components/Products.jsx";
+import Products from "../components/Products.js";
 
 const about = () => {
   return (
