@@ -4,6 +4,7 @@
   top: 0;
   z-index: 100;
   width: 100%;
+  border-bottom: 0.5px solid lightgray;
 }
 .header {
   display: flex;
@@ -13,11 +14,19 @@
   padding: 20px 30px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+.ekarilink {
+  display: flex;
+  text-decoration: none;
+  width: 10%;
+  justify-content: center;
+  align-items: center;
+}
 .row {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: row;
-  width: 25%;
+  width: 100%;
 }
 .logo {
   margin: 2%;
@@ -32,10 +41,33 @@
 .LogoText:hover {
   color: rgba(82, 76, 79);
 }
-
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search_inp {
+  font-size: 20px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border: 0.5px solid #571f46;
+  padding: 2%;
+}
+.search_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: #571f46;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 2.7%;
+  cursor: pointer;
+  margin-right: 10%;
+}
 .NavBarLinks {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 30px;
   align-items: center;
 }
@@ -53,6 +85,16 @@
   text-decoration: none;
   padding: 0px 10px;
 }
+.logout_btn {
+  background-color: #571f46;
+  color: #f3f3f3;
+  border: none;
+  border-radius: 10px;
+  width: 50%;
+  font-size: 15px;
+  height: 35px;
+  cursor: pointer;
+}
 
 .connectionButton {
   background-color: #571f46;
@@ -67,16 +109,33 @@
   row-gap: 10px;
   display: none;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1200px) {
+  .search_inp {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 980px) {
   .header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
     row-gap: 5px;
   }
-  .row {
+  .ekarilink {
     width: 100%;
     justify-content: center;
+    align-items: center;
+  }
+  .row {
+    width: 70%;
+  }
+  .search {
+    width: 100%;
+    align-self: center;
+    justify-content: center;
+  }
+  .search_inp {
+    width: 100%;
   }
 }
 @media screen and (max-width: 700px) {
