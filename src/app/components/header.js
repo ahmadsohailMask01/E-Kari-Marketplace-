@@ -40,7 +40,7 @@ export default function Header() {
           <Link className={styles.link_style} href="/about">
             About Us
           </Link>
-          <Link className={styles.link_style} href="/user">
+          <Link className={styles.link_style} href="/user_dashboard">
             User
           </Link>
           <Link className={styles.link_style} href="/about">
