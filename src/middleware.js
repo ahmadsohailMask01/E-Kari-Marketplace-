@@ -5,7 +5,7 @@ import { BASE_API_URL } from "../utils/constants";
 export function middleware(request) {
   console.log("middleware executed!");
   // return NextResponse.redirect(new URL("/home", request.url));
-  const cookie = request.cookies.get("next-auth.session-token");
+  const cookie = request.cookies.get("_Secure-next-auth.session-token");
   let url = request.url;
 
   console.log(url);
