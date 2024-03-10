@@ -137,8 +137,19 @@
     align-items: center;
   }
 }
+@media screen and (max-width: 600px) {
+  .admin_head {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    overflow-y: scroll;
+  }
+}
 @media screen and (max-width: 400px) {
   .logout {
     width: 70%;
+  }
+  .logout_btn {
+    width: 100%;
   }
 }

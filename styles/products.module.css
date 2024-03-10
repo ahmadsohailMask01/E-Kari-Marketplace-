@@ -28,6 +28,15 @@
   font-size: 20px;
   font-weight: 600;
 }
+.product_list_label {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  margin-top: 3%;
+  align-self: center;
+  color: #571d46;
+}
 .loading_gif {
   width: 100px;
   height: 100px;

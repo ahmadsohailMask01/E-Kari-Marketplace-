@@ -12,6 +12,9 @@ const User_Products = () => {
         <Link href={"/addProduct"} className={styles.btn} title="Add Product">
           Add Product
         </Link>
+        <span className={styles.product_list_label}>
+          Products Listed by You
+        </span>
         <Load />
         <div className={styles.products_container} id="container">
           <UserProductslist />

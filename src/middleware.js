@@ -6,6 +6,7 @@ export function middleware(request) {
   console.log("middleware executed!");
   // return NextResponse.redirect(new URL("/home", request.url));
   const cookie = request.cookies.get("__Secure-next-auth.session-token");
+  // const cookie = request.cookies.get("next-auth.session-token");
   let url = request.url;
 
   console.log(url);
@@ -18,7 +19,7 @@ export function middleware(request) {
   if (condition1 || condition2 || condition3) {
     return NextResponse.redirect(`${BASE_API_URL}/user_login`);
   } else if (condition4) {
-    return NextResponse.redirect(`${BASE_API_URL}/user_dashboard`);
+    return NextResponse.redirect(`${BASE_API_URL}/`);
   }
 }
 

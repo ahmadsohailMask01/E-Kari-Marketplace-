@@ -23,7 +23,7 @@ export default function Header() {
             type="text"
             className={styles.search_inp}
           />
-          <button className={styles.search_btn}>
+          <button className={styles.search_btn} title="Search!">
             <IoSearchSharp style={{ color: `#f3f3f3`, fontSize: `20px` }} />
           </button>
         </div>
@@ -34,14 +34,11 @@ export default function Header() {
           <Link className={styles.link_style} href="/products">
             Shop
           </Link>
-          <Link className={styles.link_style} href="/addProduct">
-            Create
-          </Link>
           <Link className={styles.link_style} href="/about">
             About Us
           </Link>
           <Link className={styles.link_style} href="/user_dashboard">
-            User
+            Create
           </Link>
           <Link className={styles.link_style} href="/about">
             Contact
