@@ -40,7 +40,7 @@ export default function Header() {
           <Link className={styles.link_style} href="/user_dashboard">
             Create
           </Link>
-          <Link className={styles.link_style} href="/about">
+          <Link className={styles.link_style} href="/contact">
             Contact
           </Link>
           {status === "authenticated" ? (

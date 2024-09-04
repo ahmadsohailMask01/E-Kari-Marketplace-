@@ -108,7 +108,7 @@ const About = () => {
           <span className={styles.tech_intro}>
             <Image src={ceo} className={styles.ceo_picture} alt="CEO_Image" />
             <span className={styles.ceo_name}>M. Ahmad Sohail</span>
-            <span className={styles.ceo_head}>Developer</span>
+            <span className={styles.ceo_head}>Founder</span>
           </span>
           <span className={styles.tech_para}>
             <BiSolidQuoteSingleLeft className={styles.comma1} />

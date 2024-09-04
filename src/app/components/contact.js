@@ -108,7 +108,7 @@ const Contact = () => {
               <div className={styles.row_col}>
                 <span className={styles.info_head}>Send Us Mail</span>
                 <span className={styles.info_data}>
-                  info.industrypakchem924@gmail.com
+                  info.digitalmarketplace.ekari@gmail.com
                 </span>
               </div>
             </div>

@@ -58,7 +58,7 @@
 .button {
   width: 50%;
   padding: 2%;
-  background-color: #ff5820;
+  background-color: #571d46;
   border: none;
   border-radius: 10px;
   font-size: 20px;
@@ -91,7 +91,7 @@
 }
 .icon {
   font-size: 45px;
-  color: #ff5820;
+  color: #571d46;
 }
 .row_col {
   display: flex;

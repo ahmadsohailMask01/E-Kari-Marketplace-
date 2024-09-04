@@ -15,7 +15,7 @@ const Footer = () => {
           <div className={styles.branding}>
             <Image src={logo} className={styles.logo} alt="Logo_image" />
             <div className={styles.Branding_name}>
-              <span className={styles.main_head}>E-Kari</span>
+              <span className={styles.main_head}>NFT MetaMarket</span>
             </div>
           </div>
           <div className={styles.div2}>
@@ -41,7 +41,7 @@ const Footer = () => {
                 </p>
               </div>
             </div>
-            <div className={styles.office_div}>
+            {/* <div className={styles.office_div}>
               <IoTimeSharp id="time" className={styles.time_icon} />
               <div className={styles.office_label_div}>
                 <label htmlFor="mail" className={styles.mail_label}>
@@ -51,7 +51,7 @@ const Footer = () => {
                   9:00AM - 5:00PM
                 </font>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
         <hr className={styles.hr} />

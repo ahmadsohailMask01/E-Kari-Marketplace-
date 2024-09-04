@@ -12,6 +12,7 @@
   display: flex;
   flex-direction: row;
   padding: 2%;
+  width: 96%;
   justify-content: center;
   align-items: center;
   gap: 10%;
@@ -19,8 +20,8 @@
 .branding {
   display: flex;
   flex-direction: row;
-
-  justify-content: center;
+  width: 30%;
+  justify-content: flex-start;
   align-items: center;
   gap: 2%;
 }
@@ -49,7 +50,8 @@
   display: flex;
   flex-direction: row;
   gap: 10%;
-  justify-content: center;
+  justify-content: flex-end;
+  width: 40%;
   align-items: center;
 }
 .phone_div {
@@ -151,7 +153,8 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 3%;
+  gap: 5%;
+  width: 90%;
   justify-content: space-evenly;
 }
 .con2div1 {
