@@ -19,9 +19,9 @@ const User_Dashboard = () => {
               style={{ borderRadius: `50%` }}
             ></Image>
             <div className={styles.user_info}>
-              <label>Welcome {session?.user?.name}</label>
+              <label>Welcome {session.user.name}</label>
               <span className={styles.email_label}>
-                Email: {session?.user?.email}
+                Email: {session.user.email}
               </span>
             </div>
           </div>
