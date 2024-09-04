@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import styles from "../../../styles/admin.module.css";
 import User_Products from "./User_products.js";
