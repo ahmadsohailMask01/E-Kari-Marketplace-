@@ -12,19 +12,20 @@
   justify-content: space-between;
   background-color: white;
   padding: 20px 30px;
+  width: 96%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .ekarilink {
   display: flex;
   text-decoration: none;
-  width: 10%;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  width: 30%;
 }
 .row {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: row;
   width: 100%;
 }
@@ -36,7 +37,6 @@
   font-size: 24px;
   color: #353535;
   font-weight: 700;
-  margin-left: 3%;
 }
 .LogoText:hover {
   color: rgba(82, 76, 79);
@@ -132,7 +132,7 @@
     align-items: center;
   }
   .row {
-    width: 70%;
+    width: 100%;
   }
   .search {
     width: 100%;

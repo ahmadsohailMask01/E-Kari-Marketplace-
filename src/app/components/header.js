@@ -14,10 +14,10 @@ export default function Header() {
         <Link href={"/"} className={styles.ekarilink}>
           <div className={styles.row}>
             <Image className={styles.logo} src={logo} width={50} height={50} />
-            <h1 className={styles.LogoText}>E-Kari</h1>
+            <h1 className={styles.LogoText}>NFT MetaMarket</h1>
           </div>
         </Link>
-        <div className={styles.search}>
+        {/* <div className={styles.search}>
           <input
             placeholder="Find the Art you love, by Artist"
             type="text"
@@ -26,7 +26,7 @@ export default function Header() {
           <button className={styles.search_btn} title="Search!">
             <IoSearchSharp style={{ color: `#f3f3f3`, fontSize: `20px` }} />
           </button>
-        </div>
+        </div> */}
         <div className={styles.NavBarLinks}>
           <Link className={styles.link_style} href="/">
             Explore Art
