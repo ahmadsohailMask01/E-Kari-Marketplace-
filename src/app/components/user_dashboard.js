@@ -12,15 +12,15 @@ const User_Dashboard = async () => {
         <div className={styles.admin_container}>
           <div className={styles.admin_head}>
             <Image
-              src={session.user.image}
+              src={session?.user?.image}
               width={100}
               height={100}
               style={{ borderRadius: `50%` }}
             ></Image>
             <div className={styles.user_info}>
-              <label>Welcome {session.user.name}</label>
+              <label>Welcome {session?.user?.name}</label>
               <span className={styles.email_label}>
-                Email: {session.user.email}
+                Email: {session?.user?.email}
               </span>
             </div>
           </div>
