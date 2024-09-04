@@ -21,9 +21,6 @@ export async function POST(req, res) {
   try {
     await transporter.sendMail({
       ...mailOptions,
-      from: {
-        name: "Client",
-      },
       subject: "New Order",
       text: "New Order is Confirmed!",
       html: `<!DOCTYPE html>
