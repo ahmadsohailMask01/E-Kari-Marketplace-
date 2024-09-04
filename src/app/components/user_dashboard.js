@@ -5,25 +5,32 @@ import { useSession } from "next-auth/react";
 import Image from "next/image";
 
 const User_Dashboard = () => {
-  const { data: session } = useSession();
+  const { session } = null;
+  const getSession = () => {
+    session = useSession();
+  };
   return (
     <>
       <section className={styles.admin_sec}>
         <div className={styles.admin_container}>
-          <div className={styles.admin_head}>
-            <Image
-              src={session?.user?.image}
-              width={100}
-              height={100}
-              style={{ borderRadius: `50%` }}
-            ></Image>
-            <div className={styles.user_info}>
-              <label>Welcome {session.user.name}</label>
-              <span className={styles.email_label}>
-                Email: {session.user.email}
-              </span>
+          {getSession ? (
+            <div className={styles.admin_head}>
+              <Image
+                src={session.user.image}
+                width={100}
+                height={100}
+                style={{ borderRadius: `50%` }}
+              ></Image>
+              <div className={styles.user_info}>
+                <label>Welcome {session.user.name}</label>
+                <span className={styles.email_label}>
+                  Email: {session.user.email}
+                </span>
+              </div>
             </div>
-          </div>
+          ) : (
+            "Loading"
+          )}
         </div>
         <User_Products />
       </section>
