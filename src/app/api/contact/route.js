@@ -24,7 +24,7 @@ export async function POST(req, res) {
       }
       .order_head {
         align-self: center;
-        color: #ff5820;
+        color: #571d46;
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         font-size: 45px;
         font-weight: 700;
@@ -52,7 +52,7 @@ export async function POST(req, res) {
   </head>
   <body>
     <div class="order_container">
-      <h1 class="order_head">PAKChem Traders</h1>
+      <h1 class="order_head">NFT MetaMarket</h1>
       <h1 class="order_head">Contact Details</h1>
       <label htmlFor="" class="label_info">Client Name:</label>
       <h4 class="value">${name}</h4>
