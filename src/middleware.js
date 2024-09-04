@@ -2,10 +2,10 @@ import { NextResponse } from "next/server";
 import { BASE_API_URL } from "../utils/constants";
 
 // This function can be marked `async` if using `await` inside
-export function middleware(request) {
+export async function middleware(request) {
   console.log("middleware executed!");
   // return NextResponse.redirect(new URL("/home", request.url));
-  const cookie = request.cookies.get("__Secure-next-auth.session-token");
+  const cookie = await request.cookies.get("__Secure-next-auth.session-token");
   // const cookie = request.cookies.get("next-auth.session-token");
   let url = request.url;
 
