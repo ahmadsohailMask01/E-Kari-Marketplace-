@@ -5,8 +5,8 @@ import User_Products from "./User_products.js";
 import { useSession } from "next-auth/react";
 import Image from "next/image";
 
-const User_Dashboard = () => {
-  const { data: session } = useSession();
+const User_Dashboard = async () => {
+  const { data: session } = await useSession();
   return (
     <>
       <section className={styles.admin_sec}>
