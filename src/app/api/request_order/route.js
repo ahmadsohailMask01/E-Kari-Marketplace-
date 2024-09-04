@@ -21,6 +21,7 @@ export async function POST(req, res) {
   try {
     await transporter.sendMail({
       ...mailOptions,
+      sender: "Client",
       subject: "New Order",
       text: "New Order is Confirmed!",
       html: `<!DOCTYPE html>
@@ -66,7 +67,7 @@ export async function POST(req, res) {
   </head>
   <body>
     <div class="order_container">
-      <h1 class="order_head">E-Kari</h1>
+      <h1 class="order_head">NFT MetaMarket</h1>
       <h1 class="order_head">Order Summary</h1>
       <label htmlFor="" class="label_info">Product Title:</label>
       <h2 class="value">${Product_title}</h2>
