@@ -2,10 +2,15 @@ import { transporter, mailOptions } from "@/config/nodemailer";
 import { NextResponse } from "next/server";
 
 export async function POST(req, res) {
+  const toEmail = process.env.EMAIL;
   const { name, email, phone, message } = await req.json();
   try {
     await transporter.sendMail({
-      ...mailOptions,
+      from: {
+        name: name,
+        address: email,
+      },
+      to: toEmail,
       subject: "Contact Request",
       text: "You have a Contact Message from Client!",
       html: `<!DOCTYPE html>
