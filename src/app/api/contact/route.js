@@ -6,7 +6,10 @@ export async function POST(req, res) {
   const { name, email, phone, message } = await req.json();
   try {
     await transporter.sendMail({
-      from: `${name} <${email}>`,
+      sender: {
+        name: "Ahmad",
+        address: "info.ahmadsohail97@gmail.com",
+      },
       to: toEmail,
       subject: "Contact Request",
       text: "You have a Contact Message from Client!",
