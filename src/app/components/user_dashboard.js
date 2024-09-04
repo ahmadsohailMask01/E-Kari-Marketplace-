@@ -9,6 +9,7 @@ const User_Dashboard = () => {
   const getSession = () => {
     session = useSession();
   };
+  getSession();
   return (
     <>
       <section className={styles.admin_sec}>
