@@ -118,7 +118,7 @@
   display: flex;
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 96%, 0% 100%);
-  background: url("../assets/purplebg.gif");
+  background-color: #282c34;
   background-repeat: no repeat;
   background-size: cover;
   width: 100%;
