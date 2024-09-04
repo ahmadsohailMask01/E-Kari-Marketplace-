@@ -4,6 +4,7 @@ import logo from "../../../assets/images/Logo/Logo.png";
 import Image from "next/image";
 import { signIn, signOut, useSession } from "next-auth/react";
 import { IoSearchSharp } from "react-icons/io5";
+import React from "react";
 
 export default async function Header() {
   const { status } = await useSession();
