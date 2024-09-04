@@ -6,8 +6,7 @@ export async function POST(req, res) {
   const { name, email, phone, message } = await req.json();
   try {
     await transporter.sendMail({
-      from: email,
-      to: toEmail,
+      ...mailOptions,
       subject: "Contact Request",
       text: "You have a Contact Message from Client!",
       html: `<!DOCTYPE html>
@@ -15,7 +14,7 @@ export async function POST(req, res) {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>New Order</title>
+    <title>Contact Request</title>
     <style>
       .order_container {
         padding: 2%;
