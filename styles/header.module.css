@@ -125,6 +125,7 @@
     align-items: center;
     justify-content: center;
     row-gap: 5px;
+    width: 94%;
   }
   .ekarilink {
     width: 100%;
@@ -133,6 +134,7 @@
   }
   .row {
     width: 100%;
+    justify-content: center;
   }
   .search {
     width: 100%;
@@ -155,10 +157,21 @@
   .NavBarLinks {
     display: none;
   }
+  .header {
+    width: 86%;
+  }
   .col_500 {
     display: flex;
   }
   .link_style {
     font-size: 15px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .header {
+    width: 80%;
+  }
+  .NavBarLinks {
+    width: 85%;
   }
 }
