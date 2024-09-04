@@ -5,7 +5,7 @@ import { useSession } from "next-auth/react";
 import Image from "next/image";
 
 const User_Dashboard = () => {
-  const { session } = useSession();
+  const { data: session } = useSession();
   return (
     <>
       <section className={styles.admin_sec}>
