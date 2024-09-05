@@ -5,7 +5,9 @@ import { BASE_API_URL } from "../../../utils/constants";
 const handleSubmit = async (
   product_title,
   product_price,
-  product_description
+  product_description,
+  userEmail,
+  userName
 ) => {
   try {
     await fetch(`${BASE_API_URL}/api/products`, {
@@ -17,11 +19,13 @@ const handleSubmit = async (
         product_title,
         product_price,
         product_description,
+        userEmail,
+        userName,
       }),
     });
 
     notify.success("Product Created Successfully");
-    window.location.replace("/products");
+    window.location.replace("/user_dashboard");
   } catch (error) {
     notify.error("Failed to create a Product", error);
   }

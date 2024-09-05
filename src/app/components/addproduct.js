@@ -3,16 +3,26 @@
 import React, { useState } from "react";
 import styles from "../../../styles/addProduct.module.css";
 import { RiArrowGoBackLine } from "react-icons/ri";
+import { useSession } from "next-auth/react";
 import Link from "next/link";
 import handleSubmit from "./post";
 
 const AddProduct = () => {
+  const { session } = useSession();
   const [product_title, setTitle] = useState("");
   const [product_price, setPrice] = useState("");
   const [product_description, setDescription] = useState("");
+  const userEmail = session?.user?.email;
+  const userName = session?.user?.name;
   const handle = (e) => {
     e.preventDefault();
-    handleSubmit(product_title, product_price, product_description);
+    handleSubmit(
+      product_title,
+      product_price,
+      product_description,
+      userEmail,
+      userName
+    );
   };
 
   return (
