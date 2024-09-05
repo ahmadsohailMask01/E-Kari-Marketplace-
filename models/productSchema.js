@@ -7,11 +7,6 @@ const productSchema = new Schema(
     product_description: String,
     userEmail: String,
     userName: String,
-    // medium: String,
-    // dimensions: String,
-    // imageUrl: String,
-    // status: String,
-    // artist_emailId: String,
   },
   {
     timestamps: true,

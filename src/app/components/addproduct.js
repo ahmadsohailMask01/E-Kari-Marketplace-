@@ -12,8 +12,8 @@ const AddProduct = () => {
   const [product_title, setTitle] = useState("");
   const [product_price, setPrice] = useState("");
   const [product_description, setDescription] = useState("");
-  const userEmail = "info.ahmadsohail97@gmail.com";
-  const userName = "Ahmad";
+  const userEmail = String(session?.user?.email);
+  const userName = String(session?.user?.name);
   const handle = (e) => {
     e.preventDefault();
     handleSubmit(
