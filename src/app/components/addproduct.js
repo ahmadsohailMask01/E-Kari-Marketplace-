@@ -8,6 +8,19 @@ import Link from "next/link";
 import handleSubmit from "./post";
 
 const AddProduct = () => {
+  const [image, setImage] = useState("");
+  const convert_to_base64 = (e) => {
+    console.log(e);
+    var reader = new FileReader();
+    reader.readAsDataURL(e.target.files[0]);
+    reader.onload = () => {
+      console.log(reader.result);
+      setImage(reader.result);
+    };
+    reader.onerror = (error) => {
+      console.log("Error: ", error);
+    };
+  };
   const { data: session } = useSession();
   const [product_title, setTitle] = useState("");
   const [product_price, setPrice] = useState("");
@@ -17,6 +30,7 @@ const AddProduct = () => {
   const handle = (e) => {
     e.preventDefault();
     handleSubmit(
+      image,
       product_title,
       product_price,
       product_description,
@@ -36,6 +50,59 @@ const AddProduct = () => {
             Here You can Add your Product
           </label>
           <form className={styles.form} onSubmit={handle}>
+            <div
+              style={{
+                display: `flex`,
+                flexDirection: `row`,
+                alignItems: `center`,
+                backgroundColor: `white`,
+                border: `1px solid darkgrey`,
+                width: `96%`,
+                padding: `2%`,
+                minHeight: `30px`,
+              }}
+            >
+              <div
+                style={{
+                  display: `flex`,
+                  flexDirection: `column`,
+                  rowGap: `5px`,
+                  alignItems: `flex-start`,
+                }}
+              >
+                <label
+                  for="Place Image"
+                  style={{ color: `#282c34`, fontSize: `12px` }}
+                >
+                  Insert your Image here:
+                </label>
+                <input
+                  style={{
+                    marginLeft: `1%`,
+                    color: `white`,
+                  }}
+                  required={true}
+                  type="file"
+                  accept="image/*"
+                  onChange={convert_to_base64}
+                />
+              </div>
+              {image == "" || image == null ? (
+                ""
+              ) : (
+                <img
+                  src={image}
+                  width={100}
+                  height={100}
+                  style={{
+                    borderRadius: `10px`,
+                    alignSelf: `flex-end`,
+                    justifySelf: `flex-end`,
+                    border: `1px solid darkgrey`,
+                  }}
+                />
+              )}
+            </div>
             <input
               type="text"
               onChange={(e) => setTitle(e.target.value)}

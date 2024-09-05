@@ -3,6 +3,7 @@ import { toast as notify } from "react-toastify";
 import { BASE_API_URL } from "../../../utils/constants";
 
 const handleSubmit = async (
+  image,
   product_title,
   product_price,
   product_description,
@@ -16,6 +17,7 @@ const handleSubmit = async (
         "Content-type": "application/json",
       },
       body: JSON.stringify({
+        image,
         product_title,
         product_price,
         product_description,
