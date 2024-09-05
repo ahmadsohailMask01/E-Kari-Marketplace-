@@ -8,13 +8,12 @@ import Link from "next/link";
 import handleSubmit from "./post";
 
 const AddProduct = () => {
-  const { session } = useSession();
+  const { data: session } = useSession();
   const [product_title, setTitle] = useState("");
   const [product_price, setPrice] = useState("");
   const [product_description, setDescription] = useState("");
-  const userEmail = toString(session?.user?.email);
-  console.log(session?.user?.email);
-  const userName = toString(session?.user?.name);
+  const userEmail = session?.user?.email;
+  const userName = session?.user?.name;
   const handle = (e) => {
     e.preventDefault();
     handleSubmit(
