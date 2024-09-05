@@ -25,7 +25,7 @@ const handleSubmit = async (
     });
 
     notify.success("Product Created Successfully");
-    window.location.replace("/user_dashboard");
+    window.location.replace("/products");
   } catch (error) {
     notify.error("Failed to create a Product", error);
   }
