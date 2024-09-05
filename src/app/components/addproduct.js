@@ -13,6 +13,7 @@ const AddProduct = () => {
   const [product_price, setPrice] = useState("");
   const [product_description, setDescription] = useState("");
   const userEmail = toString(session?.user?.email);
+  console.log(session?.user?.email);
   const userName = toString(session?.user?.name);
   const handle = (e) => {
     e.preventDefault();
