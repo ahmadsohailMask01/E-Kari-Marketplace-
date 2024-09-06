@@ -6,9 +6,9 @@ import RemoveButton from "./removeButton";
 import { BASE_API_URL } from "../../../utils/constants";
 import Image from "next/image";
 
-const getProducts = async (email) => {
+const getProducts = async () => {
   try {
-    const res = await fetch(`${BASE_API_URL}/api/UserProduct/${email}`, {
+    const res = await fetch(`${BASE_API_URL}/api/products`, {
       method: "GET",
       cache: "no-store",
     });
@@ -22,9 +22,8 @@ const getProducts = async (email) => {
   }
 };
 
-const UserProductslist = async ({ email }) => {
-  const { emailToFind } = email;
-  const { items } = await getProducts(emailToFind);
+const UserProductslist = async () => {
+  const { products } = await getProducts();
   const pk_currency = Intl.NumberFormat("en-PK", {
     style: "currency",
     currency: "PKR",
@@ -32,9 +31,9 @@ const UserProductslist = async ({ email }) => {
   });
   return (
     <>
-      {items.length <= 0
+      {products.length <= 0
         ? "No Products to Show"
-        : items.map((t) => (
+        : products.map((t) => (
             <div
               className={styles.product}
               key={t._id}
