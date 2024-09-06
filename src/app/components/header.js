@@ -79,7 +79,10 @@ export default function Header() {
             </Link>
           </div>
           <div className={styles.NavBarLinks_500}>
-            <Link className={styles.link_style} href="/user_dashboard">
+            <Link
+              className={styles.link_style}
+              href={`/user_dashboard/${email}`}
+            >
               User
             </Link>
             {status === "authenticated" ? (
