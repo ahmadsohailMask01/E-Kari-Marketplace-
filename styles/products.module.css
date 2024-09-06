@@ -160,6 +160,20 @@
 @media screen and (max-width: 768px) {
   .product {
     width: 100%;
+    row-gap: 40px;
+  }
+  .prodInformationRow {
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: flex-start;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 580px) {
+  .owner {
+    position: unset;
+    margin-bottom: -20px;
+    align-self: flex-end;
   }
 }
 
