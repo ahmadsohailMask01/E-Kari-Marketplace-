@@ -4,7 +4,7 @@ import { toast as note } from "react-hot-toast";
 
 const loadUserProduct = async (userEmail) => {
   try {
-    await fetch(`${BASE_API_URL}/api/products?userEmail=${userEmail}`, {
+    await fetch(`${BASE_API_URL}/api/UserProduct?userEmail=${userEmail}`, {
       method: "GET",
     });
   } catch (error) {
