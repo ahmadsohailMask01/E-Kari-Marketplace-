@@ -4,6 +4,7 @@ import { FaEdit } from "react-icons/fa";
 import Link from "next/link";
 import RemoveButton from "./removeButton";
 import { BASE_API_URL } from "../../../utils/constants";
+import Image from "next/image";
 
 const getProducts = async () => {
   try {
