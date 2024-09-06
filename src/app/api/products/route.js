@@ -4,6 +4,7 @@ import Product from "../../../../models/productSchema";
 
 export async function POST(request) {
   const {
+    image,
     product_title,
     product_price,
     product_description,
@@ -12,6 +13,7 @@ export async function POST(request) {
   } = await request.json();
   await connectMongoDB();
   await Product.create({
+    image,
     product_title,
     product_price,
     product_description,
