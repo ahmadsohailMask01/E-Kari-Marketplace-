@@ -57,7 +57,7 @@ const UserProductslist = async () => {
                   </span>
                   <span className={styles.select}>
                     <strong className={styles.select}>Price:</strong>{" "}
-                    {curr.format(t.product_price)} PKR
+                    {pk_currency.format(t.product_price)} PKR
                   </span>
                   <span
                     className={`${styles.product_description} ${styles.select}`}
