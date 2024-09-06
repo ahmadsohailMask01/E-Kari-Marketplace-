@@ -26,7 +26,7 @@ export function middleware(request) {
 // See "Matching Paths" below to learn more
 export const config = {
   matcher: [
-    "/user_dashboard",
+    "/user_dashboard/:path*",
     "/addProduct",
     "/editProduct/:path*",
     "/user_login",
