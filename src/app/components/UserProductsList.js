@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const getProducts = async () => {
   try {
-    const res = await fetch(`${BASE_API_URL}/api/products`, {
+    const res = await fetch(`${BASE_API_URL}/api/userProduct`, {
       method: "GET",
       cache: "no-store",
     });
