@@ -3,10 +3,8 @@ import styles from "../../../styles/products.module.css";
 import Link from "next/link";
 import { BASE_API_URL } from "../../../utils/constants";
 import Image from "next/image";
-import getEmailFromSession from "./getEmailFromSession";
 
 const getProducts = async () => {
-  const email = getEmailFromSession();
   try {
     const res = await fetch(`${BASE_API_URL}/api/products`, {
       method: "GET",

@@ -8,6 +8,8 @@ import { IoSearchSharp } from "react-icons/io5";
 
 export default function Header() {
   const { status } = useSession();
+  const { data: session } = useSession();
+  const email = session?.user?.email;
   return (
     <nav className={styles.nav}>
       <div className={styles.header}>
@@ -37,7 +39,7 @@ export default function Header() {
           <Link className={styles.link_style} href="/about">
             About Us
           </Link>
-          <Link className={styles.link_style} href="/user_dashboard">
+          <Link className={styles.link_style} href={`/user_dashboard/${email}`}>
             Create
           </Link>
           <Link className={styles.link_style} href="/contact">

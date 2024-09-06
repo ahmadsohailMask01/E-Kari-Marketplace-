@@ -5,7 +5,7 @@ import User_Products from "./User_products.js";
 import { useSession } from "next-auth/react";
 import Image from "next/image";
 
-const User_Dashboard = () => {
+const User_Dashboard = ({ email }) => {
   const { data: session } = useSession();
   return (
     <>
@@ -26,7 +26,7 @@ const User_Dashboard = () => {
             </div>
           </div>
         </div>
-        <User_Products />
+        <User_Products email={email} />
       </section>
     </>
   );

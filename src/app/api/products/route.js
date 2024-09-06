@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
 import connectMongoDB from "../../../../libs/mongodb";
 import Product from "../../../../models/productSchema";
-import getEmailFromSession from "@/app/components/getEmailFromSession";
 
 export async function POST(request) {
   const {
@@ -25,12 +24,8 @@ export async function POST(request) {
 }
 
 export async function GET() {
-  const emailToFind = await getEmailFromSession();
-  console.log(emailToFind);
   await connectMongoDB();
-  const products = await Product.find({
-    userEmail: emailToFind,
-  });
+  const products = await Product.find();
   console.log(products);
   return NextResponse.json({ products });
 }

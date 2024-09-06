@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Load from "./load";
 
-const User_Products = () => {
+const User_Products = ({ email }) => {
   return (
     <>
       <section className={styles.section_products}>
@@ -17,7 +17,7 @@ const User_Products = () => {
         </span>
         <Load />
         <div className={styles.products_container} id="container">
-          <UserProductslist />
+          <UserProductslist email={email} />
         </div>
       </section>
     </>

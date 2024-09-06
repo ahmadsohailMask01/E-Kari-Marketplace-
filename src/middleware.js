@@ -16,11 +16,11 @@ export function middleware(request) {
   let condition3 = !cookie && url.includes("/editProduct/");
   let condition4 = cookie && url.includes("/user_login");
 
-  if (condition1 || condition2 || condition3) {
-    return NextResponse.redirect(`${BASE_API_URL}/user_login`);
-  } else if (condition4) {
-    return NextResponse.redirect(`${BASE_API_URL}/`);
-  }
+  // if (condition1 || condition2 || condition3) {
+  //   return NextResponse.redirect(`${BASE_API_URL}/user_login`);
+  // } else if (condition4) {
+  //   return NextResponse.redirect(`${BASE_API_URL}/`);
+  // }
 }
 
 // See "Matching Paths" below to learn more

@@ -5,16 +5,26 @@ import Link from "next/link";
 import RemoveButton from "./removeButton";
 import { BASE_API_URL } from "../../../utils/constants";
 import Image from "next/image";
-import getEmailFromSession from "./getEmailFromSession";
-import loadUserProduct from "./loadUserProduct";
 
-const getProducts = async () => {
-  const email = getEmailFromSession();
-  loadUserProduct(email);
+const getProducts = async (email) => {
+  try {
+    const res = await fetch(`${BASE_API_URL}/api/UserProduct/${email}`, {
+      method: "GET",
+      cache: "no-store",
+    });
+
+    if (!res.ok) {
+      throw new Error("Failed to fetch Products");
+    }
+    return res.json();
+  } catch (error) {
+    console.log("Error loading products: ", error);
+  }
 };
 
-const UserProductslist = async () => {
-  const products = await getProducts();
+const UserProductslist = async ({ email }) => {
+  const { emailToFind } = email;
+  const { items } = await getProducts(emailToFind);
   const pk_currency = Intl.NumberFormat("en-PK", {
     style: "currency",
     currency: "PKR",
@@ -22,9 +32,9 @@ const UserProductslist = async () => {
   });
   return (
     <>
-      {products.length <= 0
+      {items.length <= 0
         ? "No Products to Show"
-        : products.map((t) => (
+        : items.map((t) => (
             <div
               className={styles.product}
               key={t._id}
