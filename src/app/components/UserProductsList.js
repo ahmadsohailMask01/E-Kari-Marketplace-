@@ -41,7 +41,7 @@ const UserProductslist = async () => {
             >
               <div className={styles.owner}>
                 <span style={{ color: `darkgray` }}>
-                  Product By: <b style={{ color: `red` }}>{t.userName}</b>
+                  Product By: <b style={{ color: `red` }}>You</b>
                 </span>
               </div>
               <div className={styles.prodInformationRow}>
