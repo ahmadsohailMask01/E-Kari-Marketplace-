@@ -5,25 +5,16 @@ import Link from "next/link";
 import RemoveButton from "./removeButton";
 import { BASE_API_URL } from "../../../utils/constants";
 import Image from "next/image";
+import getEmailFromSession from "./getEmailFromSession";
+import loadUserProduct from "./loadUserProduct";
 
 const getProducts = async () => {
-  try {
-    const res = await fetch(`${BASE_API_URL}/api/products`, {
-      method: "GET",
-      cache: "no-store",
-    });
-
-    if (!res.ok) {
-      throw new Error("Failed to fetch Products");
-    }
-    return res.json();
-  } catch (error) {
-    console.log("Error loading products: ", error);
-  }
+  const email = getEmailFromSession();
+  loadUserProduct(email);
 };
 
 const UserProductslist = async () => {
-  const { products } = await getProducts();
+  const products = await getProducts();
   const pk_currency = Intl.NumberFormat("en-PK", {
     style: "currency",
     currency: "PKR",

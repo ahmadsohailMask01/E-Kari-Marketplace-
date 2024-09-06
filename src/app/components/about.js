@@ -9,15 +9,18 @@ import {
 } from "react-icons/bi";
 import { FaPaintBrush, FaPhotoVideo, FaShareAlt } from "react-icons/fa";
 import { CgScreen } from "react-icons/cg";
+import getEmailFromSession from "./getEmailFromSession";
 
 const About = () => {
+  const email = getEmailFromSession();
+  console.log(email);
   return (
     <>
       <section className={styles.blogs_section}>
         <div className={styles.blog_container}>
           <div className={styles.head_div}>
             <span className={styles.blogs_heading}>
-              A leading platform in Pakistan
+              A leading platform in Pakistan {email}
             </span>
             <span className={styles.sub_heading}>
               Congue consectetur sapien pellentesque ultrices tempus nunc.
