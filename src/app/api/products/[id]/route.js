@@ -4,12 +4,14 @@ import Product from "../../../../../models/productSchema";
 export async function PUT(request, { params }) {
   const { id } = params;
   const {
+    newImage: image,
     newTitle: product_title,
     newPrice: product_price,
     newDescription: product_description,
   } = await request.json();
   await connectMongoDB();
   await Product.findByIdAndUpdate(id, {
+    image,
     product_title,
     product_price,
     product_description,

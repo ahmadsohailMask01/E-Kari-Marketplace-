@@ -11,7 +11,7 @@ const Delete = async (id) => {
       });
 
       note.success("Product deleted successfully");
-      window.location.reload();
+      window.location.replace("/products");
     }
   } catch (error) {
     note.error("Failed to Delete Product", error);

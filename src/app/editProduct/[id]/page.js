@@ -19,11 +19,12 @@ const getProductbyId = async (id) => {
 const page = async ({ params }) => {
   const { id } = params;
   const { product } = await getProductbyId(id);
-  const { product_title, product_price, product_description } = product;
+  const { image, product_title, product_price, product_description } = product;
   return (
     <>
       <EditProduct
         id={id}
+        image={image}
         title={product_title}
         price={product_price}
         description={product_description}
