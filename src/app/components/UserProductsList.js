@@ -62,6 +62,12 @@ const UserProductslist = async () => {
                   <span
                     className={`${styles.product_description} ${styles.select}`}
                   >
+                    <strong className={styles.select}>Product Category:</strong>{" "}
+                    {t.productCategory}
+                  </span>
+                  <span
+                    className={`${styles.product_description} ${styles.select}`}
+                  >
                     <strong className={styles.select}>Description:</strong>{" "}
                     {t.product_description}
                   </span>

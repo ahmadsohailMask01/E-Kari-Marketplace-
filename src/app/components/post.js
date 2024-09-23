@@ -6,6 +6,7 @@ const handleSubmit = async (
   image,
   product_title,
   product_price,
+  productCategory,
   product_description,
   userEmail,
   userName
@@ -20,6 +21,7 @@ const handleSubmit = async (
         image,
         product_title,
         product_price,
+        productCategory,
         product_description,
         userEmail,
         userName,

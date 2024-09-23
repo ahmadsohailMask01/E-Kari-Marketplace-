@@ -34,6 +34,10 @@
   color: #282c34;
   width: 96%;
 }
+.option {
+  width: 100%;
+  padding: 2%;
+}
 .input_price {
   font-size: 20px;
   padding: 2%;

@@ -8,6 +8,14 @@ import Link from "next/link";
 import handleSubmit from "./post";
 
 const AddProduct = () => {
+  const categoriesArray = [
+    "Digital Painting",
+    "Illustration",
+    "Pixel Art",
+    "Vector Art",
+    "Animation",
+    "NFT Art",
+  ];
   const [image, setImage] = useState("");
   const convert_to_base64 = (e) => {
     console.log(e);
@@ -21,18 +29,21 @@ const AddProduct = () => {
       console.log("Error: ", error);
     };
   };
+  const [productCategory, setProductCategory] = useState(categoriesArray[0]);
   const { data: session } = useSession();
   const [product_title, setTitle] = useState("");
   const [product_price, setPrice] = useState("");
   const [product_description, setDescription] = useState("");
   const userEmail = session?.user?.email;
   const userName = session?.user?.name;
+
   const handle = (e) => {
     e.preventDefault();
     handleSubmit(
       image,
       product_title,
       product_price,
+      productCategory,
       product_description,
       userEmail,
       userName
@@ -119,6 +130,24 @@ const AddProduct = () => {
               placeholder="Product Price in PKR"
               required={true}
             />
+            <label for="productCategory">
+              Choose a category for your product:
+            </label>
+            <select
+              onChange={(e) => {
+                setProductCategory(e.target.value);
+              }}
+              value={productCategory}
+              id="cars"
+              style={{ width: `100%`, padding: `2%`, fontSize: `20px` }}
+            >
+              {categoriesArray.map((category) => {
+                const element = (
+                  <option value={`${category}`}>{`${category}`}</option>
+                );
+                return element;
+              })}
+            </select>
             <textarea
               className={styles.textarea}
               onChange={(e) => setDescription(e.target.value)}
