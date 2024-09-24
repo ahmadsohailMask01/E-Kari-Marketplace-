@@ -13,9 +13,42 @@ import music from "../../../assets/images/CollectionType/music.png";
 import gamepad from "../../../assets/images/CollectionType/gamepad.png";
 import camera from "../../../assets/images/CollectionType/camera.png";
 import art from "../../../assets/images/CollectionType/art.png";
+import categoriesBackground from "../../../assets/bg_purple.svg";
+import digitalPainting from "../../../assets/digitalPainting.jpg";
+import illustration from "../../../assets/illustration.webp";
+import pixelArt from "../../../assets/pixelArt.webp";
+import vectorArt from "../../../assets/vectorArt.webp";
+import animation from "../../../assets/animation.webp";
+import nftArt from "../../../assets/nftArt.jpg";
 import { BASE_API_URL } from "../../../utils/constants";
 
 const MainPage = () => {
+  const arrayOfCategories = [
+    {
+      src: digitalPainting,
+      nameOfCategory: "Digital Painting",
+    },
+    {
+      src: illustration,
+      nameOfCategory: "Illustration",
+    },
+    {
+      src: pixelArt,
+      nameOfCategory: "Pixel Art",
+    },
+    {
+      src: vectorArt,
+      nameOfCategory: "Vector Art",
+    },
+    {
+      src: animation,
+      nameOfCategory: "Animation",
+    },
+    {
+      src: nftArt,
+      nameOfCategory: "NFT Art",
+    },
+  ];
   const router = useRouter();
   const [name, set_name] = useState("");
   const [email, set_email] = useState("");
@@ -103,6 +136,57 @@ const MainPage = () => {
             <Image className={styles.typeImg} src={music} />
           </div>
           <h3>PFPs</h3>
+        </div>
+      </div>
+      <div className={styles.section3}>
+        <label htmlFor="productCategories" className={styles.categoriesLabel}>
+          Explore Products by Categories
+        </label>
+        <div className={styles.allCategories}>
+          <div className={styles.container1}>
+            {arrayOfCategories.slice(0, 3).map((category) => {
+              return (
+                <div
+                  className={styles.categoriesCard}
+                  onClick={() => {
+                    window.location.replace(
+                      `/productCategories/${category.nameOfCategory}`
+                    );
+                  }}
+                >
+                  <Image
+                    className={styles.categoriesCardImage}
+                    src={category.src}
+                    style={{ borderRadius: `20px` }}
+                  ></Image>
+                  <span>
+                    <b>{`${category.nameOfCategory}`}</b>
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+          <div className={styles.container1}>
+            {arrayOfCategories.slice(3).map((category) => {
+              return (
+                <div
+                  className={styles.categoriesCard}
+                  onClick={() => {
+                    window.location.replace(
+                      `/productCategories/${category.nameOfCategory}`
+                    );
+                  }}
+                >
+                  <Image
+                    className={styles.categoriesCardImage}
+                    src={category.src}
+                    style={{ borderRadius: `20px` }}
+                  ></Image>
+                  <span>{`${category.nameOfCategory}`}</span>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </>
