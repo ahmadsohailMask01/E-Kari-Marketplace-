@@ -13,15 +13,15 @@ const getProducts = async () => {
 
     if (!res.ok) {
       throw new Error("Failed to fetch Products");
+    } else {
+      return res.json();
     }
-
-    return res.json();
   } catch (error) {
     console.log("Error loading products: ", error);
   }
 };
 
-const Productslist = async () => {
+const GetProductDesign = async () => {
   const { products } = await getProducts();
   //console.log(products);
   const curr = Intl.NumberFormat("en-PK", {
@@ -84,6 +84,10 @@ const Productslist = async () => {
           ))}
     </>
   );
+};
+
+const Productslist = () => {
+  return <GetProductDesign />;
 };
 
 export default Productslist;
